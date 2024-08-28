@@ -1,0 +1,746 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#page-1{
+    min-height: 100vh;
+    width: 100%;
+    padding: 2vw 3vw;
+    background: #EFEAE3;
+    position: relative;
+}
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+nav .manu{
+    display: none;
+    text-decoration: none;
+    padding:2vw 3vw 3vw 8vw;
+    border: 1px solid rgb(118, 114, 114);
+    border-radius: 15%;
+    color: rgb(179, 170, 170);
+    cursor: pointer;
+    z-index: 101;
+
+}
+.b1{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: -100%;
+    background-color: rgba(57, 52, 52, 0.465);
+    z-index: 99;
+    transition: all ease 0.8s;
+}
+#nav-part-2{
+    display: flex;
+    gap: 2vw;
+    
+
+}
+#nav-part-2 h4 { 
+    padding: 10px 20px;
+    border: 1px solid rgba(81, 81, 81, 0.745);
+    border-radius: 50vw;
+    font-size: 18px;
+    overflow: hidden;
+    position: relative;
+}
+#nav-part-2 h4 a{
+    text-decoration: none;
+    padding: 2vw;
+    position: relative;
+    color: rgb(67, 66, 66);
+    z-index: 9;
+}
+
+#nav-part-2 h4::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: black;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.3s;
+    
+}
+#nav-part-2 h4:hover::after{
+    bottom: 0;
+    border-radius: 0;
+}
+
+#nav-part-2 h4:hover a{
+    color: white;
+}
+#center{
+    height: 65vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+}
+#left h4{
+    width: 40vw;
+    font-size: 17px;
+    padding-bottom: 7vw;
+}
+#right h4{
+    text-transform: uppercase;
+    font-size: 65px;
+    line-height: 12vh;
+    text-align: right;
+    padding-bottom: 7vh;
+}
+#page-1 video{
+    padding-top: 12vh;
+    width: 100%;
+    position: relative;
+}
+#hero{
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+    filter: blur(2vw);
+}
+#hero-1{
+    position: absolute;
+    top: -6vw;
+    right:-2vw;
+    height: 30vw;
+    width: 40vw;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    background: #FE330A;
+}
+#hero-2{
+    position: absolute;
+    top: -6vw;
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    background: #FE330A;
+    animation-name: ani;
+    animation-timing-function: linear;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction:alternate;
+}
+#hero-3{
+    position: absolute;
+    top: -6vw;
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    background: r#FE330A;
+    animation-name: anim;
+    animation-timing-function: linear;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction:alternate;
+}
+@keyframes ani{
+    from{
+        transform: translate(-10%,-20%);
+    }
+    to{
+        transform: translate(5%,-10%);
+    }
+}
+@keyframes anim{
+    from{
+        transform: translate(-30%,-20%);
+    }
+    to{
+        transform: translate(0%,0%);
+    }
+}
+#page-2{
+    min-height: 100vw;
+    width: 100%;
+    background-color: #EFEAE3;
+}
+#moving-text{
+    padding: 7vw 0;
+    white-space: nowrap;
+}
+#moving-text h1{
+    font-size: 23vh;
+    display: inline-block;
+    text-transform: uppercase;
+}
+.gola{
+    height: 5vw;
+    width: 5vw;
+    background-color: #FE330A;
+    border-radius: 50vw;
+    margin: 2vh 2vh;
+    display: inline-block;
+}
+.con{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: move;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes move{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+#page2-bottom{
+    height: 90vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+}
+#page2-bottom h1{
+    width: 50%;
+    font-size: 55px;
+    padding-left: 2vw;
+    line-height: 50px;
+    position: relative;
+    z-index: 9;
+}
+#bottom-part2 img{
+    height: 10vw;
+    padding-right: 2vw;
+    border-radius: 20px;
+    margin: 8vh 0;
+}
+#bottom-part2{
+    width: 15%;
+    margin: 1vw;
+}
+
+#goo{
+    height: 52vh;
+    width: 52vh;
+    position: absolute;
+    top: 55%;
+    left: 30%;
+    filter: blur(20px);
+    border-radius:50%;
+    background: linear-gradient(to top right, #FE330A,#ee7605);
+    animation-name: goo;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+@keyframes goo{
+    from{
+        transform: translate(-10%,10%) skew(0);
+    }
+    to{
+        transform: translate(10%,-10%) skew(10deg);
+    }
+}
+#code{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    background: #EFEAE3;
+    align-items: center;
+}
+#gola2{
+    height: 0.5vw;
+    width: 0.5vw;
+    background-color: #FE330A;
+    border-radius: 50vw;
+    margin: auto 2vh;
+}
+#page3{
+   min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    
+}
+.elm{
+    height: 9vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 2vw;
+    border-bottom: 1px solid rgba(77, 75, 75, 0.936);
+    position: relative;
+    overflow: hidden;
+    }
+.elm h2{
+   
+    font-size: 3vw;
+    position: relative;
+}
+.elm .overlay{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background-color: #ee7605;
+    transition: all ease 0.2s;
+}
+
+.elm:hover .overlay{
+    top: 0;
+}
+.over{
+    height: 30vw;
+    width: 28vw;
+    position: fixed;
+    left: 50%;
+    top: 25%;
+    display: none;
+    z-index: 99;
+    border: 2px solid black;
+    border-radius: 25px;
+}
+#page4{
+    height:30%;
+    width: 100%;
+    padding: 4vw 2vw;
+    /* box-sizing: content-box; */
+    background-color: #EFEAE3;
+    z-index: 6;
+}
+.swiper {
+    width: 100%;
+    height: 33vw;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 28px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border-left: 1px solid rgba(79, 77, 77, 0.844);
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 33vw;
+    height: 23vw;
+    object-fit: cover;
+  }
+
+  .swiper-slide {
+    width: 35vw;
+  }
+  #page5{
+    height: 102vh;
+    width: 100%;
+  }
+  #footer{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items:last baseline; 
+    justify-content: center;
+    background-color: black;
+    color: #EFEAE3;
+  }
+  #footer h2{
+    font-size: 25vw;
+    z-index: 5;
+  }
+  .footer-content{
+    height: 45vh;
+    width: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding: 2vw 4vw ;
+    box-sizing: border-box;
+  }
+  .footer-content .footercontent-left h3{
+    font-size: 2vw;
+  }
+  .footer-content .footercontent-rignt{
+    width: 25vw;
+    padding: 5px;
+  }
+  .footer-content .footercontent-rignt form{
+    width: fit-content;
+    border-bottom: 1px solid rgb(142, 140, 140);
+  }
+  .footer-content .footercontent-rignt input,button{
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 1.5vw;
+
+  }
+  .golacon{
+    height: 7vw;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    position: absolute;
+    top: 0;
+    left: -2vw;
+  }
+  .golacon .gola-footer1{
+    height: 29vw;
+    width: 29%;
+    filter: blur(2vw);
+    position: absolute;
+    top: -3vw;
+    left: -3vw;
+    border-radius: 5vw;
+    background-color: red;
+    animation-name: an;
+    animation-timing-function:linear;
+    animation-direction: alternate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes an{
+    from{
+        transform: translate(0 ,-1vw);
+    }
+    to{
+        transform: translate(0 ,2vw) rotate(15deg);
+    }
+  }
+  .golacon .gola-footer2{
+    height: 25vw;
+    width: 90%;
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 30% ;
+    position: absolute;
+    top: -2vw;
+    right: -5vw;
+    filter: blur(3vw);
+    background-color: red;
+    animation-name: an1;
+    animation-timing-function:linear;
+    animation-direction: alternate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes an1{
+    from{
+        transform: translate(0 ,-1vw);
+    }
+    to{
+        transform: translate(0 ,0) skew(20deg);
+    }
+  }
+  .golacon .gola-footer3{
+    height: 40vw;
+    width: 60%;
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 0;
+    position: absolute;
+    transform: rotate(30deg);
+    top: -3vw;
+    right: -15vw;
+    filter: blur(3vw);
+    background-color: red;
+    animation-name: an2;
+    animation-timing-function:linear;
+    transform: rotate(30deg);
+    animation-direction: alternate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes an2{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(13deg);
+    }
+  }
+  .loader{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(22, 0, 29);
+    display: flex;
+    position: fixed;
+    align-items: center;
+    top: 0;
+    justify-content: center;
+    z-index: 10;
+    transition: all ease-out 0.3s;
+    
+  }
+  .loader h3{
+    position: absolute;
+    font-size: 4vw;
+    color: transparent;
+    background: linear-gradient(to right,orange , orangered);
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: 0;
+    animation-name: loaderAnimation;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+  }
+  .loader h3:nth-child(2){
+   animation-delay: 2s;
+  }
+  .loader h3:nth-child(3){
+   animation-delay: 3s;
+  }
+
+  @keyframes loaderAnimation{
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+  }
+  @media (max-width:600px) {
+    .loader h3{
+        font-size: 8vw;
+    }
+  }
+  @media (max-width:600px) {
+    
+    #page-1{
+        min-height: 100vh;
+        width: 100%;
+        padding: 0vw 0vw;
+    }
+    nav{
+        width: 100%;
+        padding: 7vw 0vw;
+        background-color: #EFEAE3;
+    }
+    nav .manu{
+        display: block;
+        margin-right: 4vw;
+
+    }
+    .b1 .b2{
+        height: 70%;
+        width: 100%;
+        background-color: #EFEAE3;
+        border-bottom-left-radius: 7%;
+        border-bottom-right-radius: 7%;
+            }
+    #nav-part-2{
+        display: none;
+
+    }
+    #center{
+        height: fit-content;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items:flex-start;
+    
+    }
+    #left h4{
+        width: 80vw;
+        padding-left: 2vw;
+    }
+    #right h4{
+        text-align: right;
+        padding-right: 2vw;
+        width: 100vw;
+       
+    }
+    #page-1 video{
+        padding-top: 12vh;
+        width: 100%;
+        position: relative;
+    }
+    #page-1 video{
+        padding: 12vh 3vw;
+    }
+    #hero-1{
+        height: 50vw;
+        width: 50vw;
+    }
+    #hero-2{
+        height: 50vw;
+        width: 50vw;
+    }
+    #hero-3{
+        height: 50vw;
+        width: 50vw;
+    }
+    #moving-text{
+        padding: 0vw 0;
+    }
+    #moving-text h1{
+        font-size: 13vh;
+    }
+    .gola{
+        height: 6vw;
+        width: 6vw;
+    }
+    #page2-bottom{
+        height: fit-content;
+        width: 100%;
+        flex-direction: column;
+        align-items:flex-start;
+    }
+    #page2-bottom h1{
+        width: 95%;
+        font-size: 28px;
+        line-height: 35px;
+    }
+    #bottom-part2 img{
+        height: 39vw;
+        border-radius: 10px;
+        margin: 8vh 4vw;
+    }
+    #bottom-part2{
+        width: 75%;
+        z-index: 10;
+        margin: 0 4vw;
+        font-weight: lighter;
+    }
+    #code{
+        height: 7vh;
+        padding: 3vw 0;
+    }
+    #gola2{
+        height: 1.5vw;
+        width: 1.5vw;
+        margin: auto 3vh;
+    }
+     .elm{
+         height: 12vw;
+         width: 100%;
+         }
+     .elm h2{
+        
+         font-size: 5vw;
+     }
+     .over{
+         height: 40vw;
+         width: 38vw;
+         left: 62%;
+     }
+     #page3 {
+        min-height: fit-content;
+        padding-bottom: 4vw;
+      }
+      #page4 {
+        padding: 6vw 2vw;
+        padding-bottom: 10vw;
+      }
+    .swiper {
+        width: 100%;
+        height: 53vw;
+      }
+      .swiper-slide {
+        width: 65vw;
+      }
+     
+      #footer h2{
+        display: none;
+      }
+      .footer-content{
+        height: 55vh;
+        width: 100%;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding: 2vw 4vw ;
+      }
+      .footer-content .footercontent-left h3{
+        font-size: 9vw;
+        padding: 1vw;
+      }
+      .footer-content .footercontent-rignt{
+        width: 80%;
+        padding: 5px;
+      }
+      .footer-content .footercontent-rignt form{
+        width: 74vw;
+        height: fit-content;
+        border-bottom: 1px solid rgb(142, 140, 140);
+      }
+      .footer-content .footercontent-rignt input,button{
+        font-size: 5vw;
+        padding-top: 4vw;
+    
+      }
+      .golacon{
+        height: 37vw;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        position: absolute;
+        top: 0;
+        left: -2vw;
+      }
+      .golacon .gola-footer1{
+        height: 79vw;
+        width: 79vw;
+        filter: blur(2vw);
+        position: absolute;
+        top: -3vw;
+        left: -3vw;
+        border-radius: 50%;
+        animation-name: an5;
+        animation-timing-function:linear;
+        animation-direction: alternate;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+      }
+      @keyframes an5{
+        from{
+            transform: translate(0 ,-5vw);
+        }
+        to{
+            transform: translate(-2vw ,0) rotate(15deg);
+        }
+      }
+      .golacon .gola-footer2{
+        width: 110%;
+        height: 45vw;
+        background-color: red;
+        left: -1.2vw;
+      }
+      .golacon .gola-footer3{
+        height: 79vw;
+        width: 79vw;
+        border-radius: 50%;
+      }
+      @keyframes an2{
+        from{
+            transform: translate(0 ,-1vw);
+        }
+        to{
+            transform: translate(0 ,18vw) rotate(15deg);
+        }
+      }
+  }
